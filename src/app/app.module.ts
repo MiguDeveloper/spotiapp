@@ -1,13 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { SearchComponent } from './components/search/search.component';
-import { ArtistaComponent } from './components/artista/artista.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './components/home/home.component';
+import {SearchComponent} from './components/search/search.component';
+import {ArtistaComponent} from './components/artista/artista.component';
+import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {APP_ROUTING} from './app.routes';
 import {HttpClientModule} from '@angular/common/http';
+import {NoimagesPipe} from './pipes/noimages.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagesPipe
   ],
   imports: [
     BrowserModule,
@@ -25,4 +27,5 @@ import {HttpClientModule} from '@angular/common/http';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
