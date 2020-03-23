@@ -9,6 +9,9 @@ import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {APP_ROUTING} from './app.routes';
 import {HttpClientModule} from '@angular/common/http';
 import {NoimagesPipe} from './pipes/noimages.pipe';
+import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { NgStyleComponent } from './components/ng-style/ng-style.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import {NoimagesPipe} from './pipes/noimages.pipe';
     SearchComponent,
     ArtistaComponent,
     NavbarComponent,
-    NoimagesPipe
+    NoimagesPipe,
+    TarjetasComponent,
+    LoadingComponent,
+    NgStyleComponent
   ],
   imports: [
     BrowserModule,

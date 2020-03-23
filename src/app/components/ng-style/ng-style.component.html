@@ -1,0 +1,33 @@
+<p [style.fontSize.px]="tamanio">ng-style ejemplo</p>
+
+<button type="button" class="btn btn-primary" (click)="tamanio = tamanio + 5"><i class="fa fa-plus"></i></button>
+<button type="button" class="btn btn-primary" (click)="tamanio = tamanio - 5"><i class="fa fa-minus"></i></button>
+
+<div class="row my-2"></div>
+
+<div class="alert" [ngClass]="tipoAlert" role="alert">
+  este es un ejemplo de tipos de alert la cual aplicaremos un estilo dependiendo de la acción
+</div>
+
+<button type="button" class="btn btn-outline-primary" (click)="aplicarEstiloAlert('alert-primary')">btnPrimary</button>
+<button type="button" class="btn btn-outline-secondary" (click)="aplicarEstiloAlert('alert-warning')">btnWarning
+</button>
+<button type="button" class="btn btn-outline-success" (click)="aplicarEstiloAlert('alert-info')">btnInfo</button>
+
+<br><br>
+
+<p [ngClass]="{'text-danger': propiedades.danger, 'text-info': !propiedades.danger}">Ejemplo de parrafo</p>
+
+<button type="button" class="btn"
+        [ngClass]="{'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger}"
+        (click)="propiedades.danger = !propiedades.danger">Cambia parrafo</button>
+
+<br><br>
+
+<h3>Proceso asincrono</h3>
+
+<button type="button" class="btn btn-primary" (click)="ejecutar()" [disabled]="loading">
+  <i [ngClass]="{'fa-save': !loading, 'fa-refresh fa-spin': loading}" class="fa"></i>
+  <span *ngIf="!loading"> Guardar cambios</span>
+  <span *ngIf="loading"> Guardando</span>
+</button>
