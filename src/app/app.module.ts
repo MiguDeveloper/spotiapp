@@ -12,6 +12,8 @@ import {NoimagesPipe} from './pipes/noimages.pipe';
 import { TarjetasComponent } from './components/shared/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
+import { ResaltadoDirective } from './directives/resaltado.directive';
+import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NgStyleComponent } from './components/ng-style/ng-style.component';
     NoimagesPipe,
     TarjetasComponent,
     LoadingComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    ResaltadoDirective,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,

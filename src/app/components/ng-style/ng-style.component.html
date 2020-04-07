@@ -20,7 +20,8 @@
 
 <button type="button" class="btn"
         [ngClass]="{'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger}"
-        (click)="propiedades.danger = !propiedades.danger">Cambia parrafo</button>
+        (click)="propiedades.danger = !propiedades.danger">Cambia parrafo
+</button>
 
 <br><br>
 
@@ -31,3 +32,8 @@
   <span *ngIf="!loading"> Guardar cambios</span>
   <span *ngIf="loading"> Guardando</span>
 </button>
+
+<br><br>
+
+<!-- Directivas -->
+<p [appResaltado]="'blue'">Texto de directiva personalizada</p>
