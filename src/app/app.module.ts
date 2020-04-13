@@ -14,6 +14,11 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
 import { NgStyleComponent } from './components/ng-style/ng-style.component';
 import { ResaltadoDirective } from './directives/resaltado.directive';
 import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
+import { ExamplerutasComponent } from './components/examplerutas/examplerutas.component';
+import { UsuarioComponent } from './components/usuario/usuario.component';
+import { UsuarioNuevoComponent } from './components/usuario/usuario-nuevo.component';
+import { UsuarioEditarComponent } from './components/usuario/usuario-editar.component';
+import { UsuarioDetalleComponent } from './components/usuario/usuario-detalle.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import { NgSwitchComponent } from './components/ng-switch/ng-switch.component';
     LoadingComponent,
     NgStyleComponent,
     ResaltadoDirective,
-    NgSwitchComponent
+    NgSwitchComponent,
+    ExamplerutasComponent,
+    UsuarioComponent,
+    UsuarioNuevoComponent,
+    UsuarioEditarComponent,
+    UsuarioDetalleComponent
   ],
   imports: [
     BrowserModule,
