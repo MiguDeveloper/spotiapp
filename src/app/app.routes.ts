@@ -6,12 +6,14 @@ import {NgStyleComponent} from './components/ng-style/ng-style.component';
 import {NgSwitchComponent} from './components/ng-switch/ng-switch.component';
 import {UsuarioComponent} from './components/usuario/usuario.component';
 import {USUARIO_ROUTES} from './components/usuario/usuario.routes';
+import {PreciosComponent} from './components/precios/precios.component';
+import {ProtegidaComponent} from './components/protegida/protegida.component';
+import {AuthGuard} from './services/auth.guard';
 
 const APP_ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'search', component: SearchComponent},
   {path: 'artista', component: ArtistaComponent},
-  {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: 'artist/:id', component: ArtistaComponent},
   {path: 'ngstyle', component: NgStyleComponent},
   {path: 'directivas', redirectTo: 'ngstyle'},
@@ -21,6 +23,9 @@ const APP_ROUTES: Routes = [
     component: UsuarioComponent,
     children: USUARIO_ROUTES
   },
+  {path: 'precios', component: PreciosComponent},
+  {path: 'protegida', component: ProtegidaComponent, canActivate:[AuthGuard]},
+  {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
