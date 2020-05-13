@@ -10,7 +10,7 @@ export class UsuarioNuevoComponent implements OnInit {
   constructor(private router: ActivatedRoute) {
     this.router.parent.params.subscribe(parametros => {
       console.log('parametro hijo');
-      console.log(parametros);
+      // console.log(parametros);
     });
   }
 

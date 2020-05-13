@@ -28,7 +28,7 @@ export class ArtistaComponent implements OnInit {
     this.loadingArtista = true;
     this.spotifyService.getArtista(id)
       .subscribe(artista => {
-        console.log(artista);
+        // console.log(artista);
         this.artista = artista;
         this.loadingArtista = false;
       });
@@ -38,7 +38,7 @@ export class ArtistaComponent implements OnInit {
     this.spotifyService.getTopTrack(id)
       .subscribe(topTracks => {
         this.topTracks = topTracks;
-        console.log(topTracks);
+        // console.log(topTracks);
       });
   }
 }

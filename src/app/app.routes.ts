@@ -9,6 +9,8 @@ import {USUARIO_ROUTES} from './components/usuario/usuario.routes';
 import {PreciosComponent} from './components/precios/precios.component';
 import {ProtegidaComponent} from './components/protegida/protegida.component';
 import {AuthGuard} from './services/auth.guard';
+import {FormularioTemplateComponent} from './components/formulario-template/formulario-template.component';
+import {FormularioDataReactiveComponent} from './components/formulario-data-reactive/formulario-data-reactive.component';
 
 const APP_ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
@@ -26,6 +28,8 @@ const APP_ROUTES: Routes = [
   {path: 'precios', component: PreciosComponent},
   {path: 'protegida', component: ProtegidaComponent, canActivate:[AuthGuard]},
   {path: '', pathMatch: 'full', redirectTo: 'home'},
+  {path: 'form-template', component: FormularioTemplateComponent},
+  {path: 'form-reactive', component: FormularioDataReactiveComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

@@ -20,7 +20,7 @@ export class UsuarioComponent implements OnInit, OnChanges, DoCheck, AfterConten
   constructor(private router: ActivatedRoute) {
     this.router.params.subscribe(parametros => {
       console.log('Ruta padre');
-      console.log(parametros);
+      // console.log(parametros);
     });
   }
 

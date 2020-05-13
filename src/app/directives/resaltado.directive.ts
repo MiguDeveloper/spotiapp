@@ -13,7 +13,7 @@ export class ResaltadoDirective {
   }
 
   @HostListener('mouseenter') mouseEntro() {
-    console.log(this.nuevoColor);
+    // console.log(this.nuevoColor);
     this.resaltar(this.nuevoColor || 'yellow');
   }
 

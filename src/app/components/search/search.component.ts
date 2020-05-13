@@ -25,7 +25,7 @@ export class SearchComponent implements OnInit {
         this.loading = false;
       });
 
-    console.log(termino);
+    // console.log(termino);
   }
 
 }
