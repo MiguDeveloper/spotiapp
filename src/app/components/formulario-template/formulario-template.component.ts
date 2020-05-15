@@ -13,7 +13,8 @@ export class FormularioTemplateComponent implements OnInit {
     nombre: '',
     apellido: '',
     correo: '',
-    pais: ''
+    pais: '',
+    genero: ''
   };
 
   paises: any[] = [];

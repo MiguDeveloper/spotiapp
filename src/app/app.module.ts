@@ -23,7 +23,7 @@ import {ProtegidaComponent} from './components/protegida/protegida.component';
 import {PreciosComponent} from './components/precios/precios.component';
 import {FormularioTemplateComponent} from './components/formulario-template/formulario-template.component';
 import {FormularioDataReactiveComponent} from './components/formulario-data-reactive/formulario-data-reactive.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     HttpClientModule,
     APP_ROUTING,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
