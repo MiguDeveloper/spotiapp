@@ -40,6 +40,44 @@
       <small *ngIf="formControlNoValido('correo')" class="text-danger">Ingrese un correo valido</small>
     </div>
   </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Usuario</label>
+    <div class="col">
+      <input type="text"
+             class="form-control"
+             placeholder="Usuario"
+             formControlName="usuario"
+             [class.is-invalid]="formControlNoValido('usuario')"
+             [class.is-valid]="formControlValido('usuario')">
+      <small *ngIf="formControlNoValido('usuario')" class="text-danger">Ingrese un usuario</small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Contraseña</label>
+    <div class="col">
+      <input class="form-control"
+             type="password"
+             placeholder="Contraseña"
+             formControlName="pass1"
+             [class.is-invalid]="formControlNoValido('pass1')"
+             [class.is-valid]="formControlValido('pass1')">
+      <small></small>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Repita</label>
+    <div class="col">
+
+      <input class="form-control"
+             type="password"
+             placeholder="Repita contraseña"
+             [class.is-invalid]="pass2NoValido"
+             formControlName="pass2">
+
+    </div>
+  </div>
 
   <div class="form-group row" formGroupName="direccion">
     <label class="col-2 col-form-label">Dirección</label>
