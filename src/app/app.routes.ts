@@ -11,6 +11,9 @@ import {ProtegidaComponent} from './components/protegida/protegida.component';
 import {AuthGuard} from './services/auth.guard';
 import {FormularioTemplateComponent} from './components/formulario-template/formulario-template.component';
 import {FormularioDataReactiveComponent} from './components/formulario-data-reactive/formulario-data-reactive.component';
+import {HeroeComponent} from './components/heroe/heroe.component';
+import {HeroesComponent} from './components/heroes/heroes.component';
+
 
 const APP_ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
@@ -26,10 +29,12 @@ const APP_ROUTES: Routes = [
     children: USUARIO_ROUTES
   },
   {path: 'precios', component: PreciosComponent},
-  {path: 'protegida', component: ProtegidaComponent, canActivate:[AuthGuard]},
+  {path: 'protegida', component: ProtegidaComponent, canActivate: [AuthGuard]},
   {path: '', pathMatch: 'full', redirectTo: 'home'},
   {path: 'form-template', component: FormularioTemplateComponent},
   {path: 'form-reactive', component: FormularioDataReactiveComponent},
+  {path: 'heroes', component: HeroesComponent},
+  {path: 'heroe/:id', component: HeroeComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

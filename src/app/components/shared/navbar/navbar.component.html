@@ -42,6 +42,12 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['form-reactive']">form data/reactive</a>
       </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['heroe','id']">Heroe</a>
+      </li>
     </ul>
     <span class="navbar-text">
       <button *ngIf="authService.loggedIn" (click)="authService.logout()" class="btn btn-outline-danger">Salir</button>

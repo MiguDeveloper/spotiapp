@@ -24,6 +24,8 @@ import {PreciosComponent} from './components/precios/precios.component';
 import {FormularioTemplateComponent} from './components/formulario-template/formulario-template.component';
 import {FormularioDataReactiveComponent} from './components/formulario-data-reactive/formulario-data-reactive.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { HeroeComponent } from './components/heroe/heroe.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ProtegidaComponent,
     PreciosComponent,
     FormularioTemplateComponent,
-    FormularioDataReactiveComponent
+    FormularioDataReactiveComponent,
+    HeroesComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,
