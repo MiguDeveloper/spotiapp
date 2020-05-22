@@ -4,8 +4,4 @@ export class HeroeModel {
   poder: string;
   vivo: boolean;
 
-  constructor() {
-    this.vivo = true;
-  }
-
 }
