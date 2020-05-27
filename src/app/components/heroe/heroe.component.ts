@@ -33,18 +33,29 @@ export class HeroeComponent implements OnInit {
   submitFormHeroe() {
     if (this.formHeroe.valid) {
       this.heroe = new HeroeModel();
+
+      if (this.formHeroe.controls.id.value !== '') {
+        this.heroe.id = this.formHeroe.controls.id.value;
+      }
+
       this.heroe.nombre = this.formHeroe.controls.nombre.value;
       this.heroe.poder = this.formHeroe.controls.poder.value;
       this.heroe.vivo = this.formHeroe.controls.vivo.value === 'true' ? true : false;
 
-      this.heroesService.crearHeroe(this.heroe)
-        .subscribe(resp => {
-          this.formHeroe.controls.id.setValue(resp.id);
-          console.log(resp);
-        });
+      if (this.heroe.id !== undefined) { // actualizamos
+        this.heroesService.actualizarHeroe(this.heroe)
+          .subscribe(resp => {
+            console.log(resp);
+          });
+      } else { // creamos
+        this.heroesService.crearHeroe(this.heroe)
+          .subscribe(resp => {
+            this.formHeroe.controls.id.setValue(resp.id);
+            console.log(resp);
+          });
+      }
     }
-    //console.log(this.formHeroe);
-    //console.log(this.heroe);
   }
+
 
 }

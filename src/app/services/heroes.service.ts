@@ -14,6 +14,8 @@ export class HeroesService {
   }
 
   crearHeroe(heroe: HeroeModel) {
+    console.log('estamos creando');
+    console.log(heroe);
     return this.httpClient.post(`${this.uri}/heroes.json`, heroe)
       .pipe(
         map((resp: any) => {
@@ -21,5 +23,15 @@ export class HeroesService {
           return heroe;
         })
       );
+  }
+
+  actualizarHeroe(heroe: HeroeModel) {
+    console.log('estamos actualizando');
+    console.log(heroe);
+    const heroeTemp = {
+      ...heroe
+    };
+    delete heroeTemp.id;
+    return this.httpClient.put(`${this.uri}/heroes/${heroe.id}.json`, heroeTemp);
   }
 }
