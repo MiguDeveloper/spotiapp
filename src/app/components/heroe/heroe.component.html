@@ -46,7 +46,8 @@
                  type="radio"
                  name="vivo"
                  value="true"
-                 formControlName="vivo">
+                 formControlName="vivo"
+          [checked]="estadoHeroe">
           <label class="form-check-label">Vivo</label>
         </div>
         <div class="form-check form-check-inline">
@@ -54,7 +55,8 @@
                  type="radio"
                  name="vivo"
                  value="false"
-                 formControlName="vivo">
+                 formControlName="vivo"
+          [checked]="!estadoHeroe">
           <label class="form-check-label">Muerto</label>
         </div>
       </div>
