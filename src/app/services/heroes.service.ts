@@ -58,6 +58,10 @@ export class HeroesService {
   }
 
   getHeroe(id: string){
-    return this.httpClient.get(`${this.uri}/heroes/${id}.json`)
+    return this.httpClient.get(`${this.uri}/heroes/${id}.json`);
+  }
+
+  deleteHeroe(id: string){
+    return this.httpClient.delete(`${this.uri}/heroes/${id}.json`);
   }
 }

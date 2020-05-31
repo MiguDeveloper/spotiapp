@@ -15,7 +15,7 @@ export class HeroeComponent implements OnInit {
 
   heroe: HeroeModel;
   formHeroe: FormGroup;
-  estadoHeroe: boolean;
+  estadoHeroe = true;
 
   constructor(private fb: FormBuilder,
               private heroesService: HeroesService,
@@ -45,7 +45,7 @@ export class HeroeComponent implements OnInit {
       id: [{value: '', disabled: true}],
       nombre: ['', Validators.required],
       poder: ['', Validators.required],
-      vivo: [null, Validators.required]
+      vivo: ['true', Validators.required]
     });
   }
 
