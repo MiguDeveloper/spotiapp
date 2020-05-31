@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HeroeModel} from '../../models/heroe.model';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {HeroesService} from '../../services/heroes.service';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert';
 import {Observable} from "rxjs";
 import {ActivatedRoute} from "@angular/router";
 
@@ -57,14 +57,13 @@ export class HeroeComponent implements OnInit {
         this.heroe.id = this.formHeroe.controls.id.value;
       }
 
-      Swal.fire({
+      Swal({
         title: 'Espere',
         text: 'Guardando la informacion',
-        icon: 'info',
-        allowOutsideClick: false
+        icon: 'info'
       });
 
-      Swal.showLoading();
+      //Swal.showLoading();
 
       let peticion: Observable<any>;
 
@@ -85,11 +84,11 @@ export class HeroeComponent implements OnInit {
           this.formHeroe.controls.id.setValue(resp.id);
         }
 
-        Swal.fire({
+        Swal({
           title: this.heroe.nombre,
           text: 'Se creo con éxito el heroe',
           icon: 'success'
-        })
+        });
       })
 
     }

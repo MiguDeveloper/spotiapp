@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HeroesService} from "../../services/heroes.service";
 import {HeroeModel} from "../../models/heroe.model";
-import Swal from "sweetalert2";
+import Swal from "sweetalert";
 
 @Component({
   selector: 'app-heroes',
@@ -30,15 +30,17 @@ export class HeroesComponent implements OnInit {
   }
 
   deleteHeroe(heroe: HeroeModel, i: number) {
-    Swal.fire({
+    Swal({
       title: "¿esta seguro?",
       text: `Esta seguro que desea borrar a ${heroe.nombre}`,
-      icon: 'question',
-      showConfirmButton: true,
-      showCancelButton: true
+      icon: 'warning',
+      buttons: {
+        cancel: true,
+        confirm: true
+      }
     }).then(
       resp => {
-        if (resp.value) {
+        if (resp) {
           this.heroes.splice(i, 1);
           this.heroesService.deleteHeroe(heroe.id).subscribe();
         }

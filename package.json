@@ -23,7 +23,7 @@
     "@auth0/auth0-spa-js": "^1.6.5",
     "core-js": "^2.5.4",
     "rxjs": "~6.2.0",
-    "sweetalert2": "^9.13.4",
+    "sweetalert": "^2.1.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
